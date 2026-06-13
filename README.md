@@ -21,7 +21,7 @@ You maintain full control of your HTML. Use with `<picture>` or `<img>` or CSS `
 ## Installation
 
 ```
-npm install --save-dev @11ty/eleventy-img
+npm install --save-dev @katccat/eleventy-img
 ```
 
 _[The full `eleventy-img` documentation is on 11ty.dev](https://www.11ty.dev/docs/plugins/image/)._
