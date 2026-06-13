@@ -153,25 +153,23 @@ test("Image markup (throws on invalid object)", async t => {
   t.notThrows(() => generateHTML({ jpeg: [{}] }, { alt: "" }));
 });
 
-test("Image markup (throws on missing alt)", async t => {
+test("Image markup (missing alt defaults to empty string)", async t => {
   let results = await eleventyImage("./test/bio-2017.jpg", {
     dryRun: true
   });
 
-  t.throws(() => generateHTML(results, {
+  t.is(generateHTML(results, {
     src: "./test/bio-2017.jpg"
-  }), {
-    message: "Missing `alt` attribute on eleventy-img shortcode from: ./test/bio-2017.jpg"
-  });
+  }), `<picture><source type="image/webp" srcset="/img/KkPMmHd3hP-1280.webp 1280w"><img src="/img/KkPMmHd3hP-1280.jpeg" alt="" width="1280" height="853"></picture>`);
 });
 
-test("Image markup (throws on missing alt return html)", async t => {
-  await t.throwsAsync(() => eleventyImage("./test/bio-2017.jpg", {
+test("Image markup (missing alt return html defaults to empty string)", async t => {
+  let html = await eleventyImage("./test/bio-2017.jpg", {
     dryRun: true,
     returnType: "html"
-  }), {
-    message: "Missing `alt` attribute on eleventy-img shortcode from: ./test/bio-2017.jpg"
   });
+
+  t.is(html, `<picture><source type="image/webp" srcset="/img/KkPMmHd3hP-1280.webp 1280w"><img src="/img/KkPMmHd3hP-1280.jpeg" alt="" width="1280" height="853"></picture>`);
 });
 
 test("Image markup (throws on missing sizes return html)", async t => {

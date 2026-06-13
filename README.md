@@ -8,6 +8,8 @@ Low level utility to perform build-time image transformations for both vector an
 
 You maintain full control of your HTML. Use with `<picture>` or `<img>` or CSS `background-image`, or others! Works great to add `width` and `height` to your images!
 
+**I forked this package to remove an aggressive and pedantic behavior where the plugin crashes if you forget to include an alt attribute on your image. Even for purely decorative images, users are told to add additional boilerplate in the form of alt="".**
+
 ## [The full `eleventy-img` documentation is on 11ty.dev](https://www.11ty.dev/docs/plugins/image/).
 
 * _This is a plugin for the [Eleventy static site generator](https://www.11ty.dev/)._

@@ -33,10 +33,11 @@ export function generateObject(metadata, userDefinedImgAttributes = {}, userDefi
   // The attributes.src gets overwritten later on. Save it here to make the error outputs less cryptic.
   let originalSrc = imgAttributes.src;
 
-  if(imgAttributes.alt === undefined) {
-    // You bet we throw an error on missing alt (alt="" works okay)
-    throw new Error(`Missing \`alt\` attribute on eleventy-img shortcode from: ${originalSrc}`);
-  }
+  if (imgAttributes.alt === undefined) imgAttributes.alt = "";
+  //   if(imgAttributes.alt === undefined) {
+  //     // You bet we throw an error on missing alt (alt="" works okay)
+  //     throw new Error(`Missing \`alt\` attribute on eleventy-img shortcode from: ${originalSrc}`);
+  //   }
 
   let formats = Object.keys(metadata);
   let values = Object.values(metadata);

@@ -1,6 +1,6 @@
 {
-  "name": "@11ty/eleventy-img",
-  "version": "7.0.0-alpha.4",
+  "name": "@katccat/eleventy-img",
+  "version": "7.0.1",
   "description": "Low level utility to perform build-time image transformations.",
   "type": "module",
   "publishConfig": {
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/11ty/eleventy-img.git"
+    "url": "git+https://github.com/katccat/11ty-image.git"
   },
   "funding": {
     "type": "opencollective",
@@ -35,9 +35,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/11ty/eleventy-img/issues"
+    "url": "https://github.com/katccat/11ty-image/issues"
   },
-  "homepage": "https://github.com/11ty/eleventy-img#readme",
+  "homepage": "https://github.com/katccat/11ty-image#readme",
   "dependencies": {
     "@11ty/eleventy-fetch": "^5.1.2",
     "@11ty/eleventy-utils": "^2.0.7",
