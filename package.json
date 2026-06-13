@@ -1,6 +1,6 @@
 {
   "name": "@katccat/eleventy-img",
-  "version": "7.0.1",
+  "version": "7.0.2",
   "description": "Low level utility to perform build-time image transformations.",
   "type": "module",
   "publishConfig": {
